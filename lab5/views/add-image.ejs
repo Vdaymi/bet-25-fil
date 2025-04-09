@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Image</title>
+  <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+  <h1>Додати новий запис</h1>
+  <form class="add-container" action="/add-image" method="post">
+    <label>Назва зображення:</label><br>
+    <input type="text" name="name_image" required><br>
+    <label>Автор:</label><br>
+    <input type="text" name="author" required><br>
+    <label>Текст:</label><br>
+    <textarea name="text" rows="5" required></textarea><br>
+    <button type="submit">Додати</button>
+  </form>
+  <a class="add-container-a" href="/images">Повернутися до списку записів</a>
+</body>
+</html>

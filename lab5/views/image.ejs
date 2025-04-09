@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Image</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1><%= image.name_image %></h1>
+    <p>Автор: <%= image.author %></p>
+    <p class="d-put">Опис: <%= image.text %></p>
+    <a href="/edit/<%= image._id %>">Редагувати</a>
+    <form action="/images/<%= image._id %>?_method=DELETE" method="post">
+      <button type="submit">Видалити</button>
+    </form>
+  </div>
+  <a href="/images">Повернутися до списку записів</a>
+</body>
+</html>

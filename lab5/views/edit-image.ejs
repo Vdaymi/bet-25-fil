@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Image</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Редагувати запис</h1>
+  <form class="container" action="/edit/<%= image._id %>?_method=PUT" method="post">
+    <label>Назва зображення:</label><br>
+    <input type="text" name="name_image" value="<%= image.name_image %>" required><br>
+    <label>Автор:</label><br>
+    <input type="text" name="author" value="<%= image.author %>" required><br>
+    <label>Текст:</label><br>
+    <textarea name="text" rows="5" required><%= image.text %></textarea><br>
+    <button type="submit">Оновити</button>
+  </form>
+  <a href="/images/<%= image._id %>">Повернутися до запису</a>
+</body>
+</html>

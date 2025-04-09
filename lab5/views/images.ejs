@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Картини</h1>
+  <a href="/add-image">Додати новий запис</a>
+  <ul>
+    <% Images.forEach(image => { %>
+      <li class="container">
+        <h3><a href="/images/<%= image._id %>"><%= image.name_image %></a></h3>
+        <p>Автор: <%= image.author %></p>
+        <p>Опис: <%= image.text.substring(0, 100) %>...</p>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

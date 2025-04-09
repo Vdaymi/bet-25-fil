@@ -23,10 +23,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/weather/:city?', async (req, res) => {
-  // const city = req.params.city || req.query.city;
-  // if (!city) {
-  //   return res.status(400).send('Назву міста не вказано. Використовуйте /weather/{city} або /weather?city={city}');
-  // }
+
   const city = req.params.city || req.query.city;
   const lat = req.query.lat;
   const lon = req.query.lon;
